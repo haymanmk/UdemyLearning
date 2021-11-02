@@ -39,6 +39,7 @@ function NQueens(n) {
     while (k < j) {
       if (table[i][k] === "Q") {
         violation = true;
+        break;
       }
       k++;
     }
@@ -49,6 +50,7 @@ function NQueens(n) {
     while (i + k < n && j - k >= 0) {
       if (table[i + k][j - k] === "Q") {
         violation = true;
+        break;
       }
       k++;
     }
@@ -59,6 +61,7 @@ function NQueens(n) {
     while (i - k >= 0 && j - k >= 0) {
       if (table[i - k][j - k] === "Q") {
         violation = true;
+        break;
       }
       k++;
     }
@@ -68,15 +71,18 @@ function NQueens(n) {
       table[i][j] = null;
       console.log("Violation occurred.");
       i++;
-    } 
-    else {
+    } else {
       console.log("It's OK to put here.");
       console.log(table);
       if (j === n - 1) {
         perfection++;
         console.log("There's a perfection meet.");
+        table[i][j] = null;
+        i++;
+        j = 0;
       } else {
         j++;
+        i = 0;
       }
     }
 
@@ -90,10 +96,11 @@ function NQueens(n) {
 
     function checkPrevious() {
       j--;
-      for (let b = n - 1; b > 0; b--) {
+      for (let b = n - 1; b >= 0; b--) {
         if (table[b][j] === "Q") {
           table[b][j] = null;
           i = b + 1;
+          console.log("back track to " + b + " " + j);
         }
       }
     }
