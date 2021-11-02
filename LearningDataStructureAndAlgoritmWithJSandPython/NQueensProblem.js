@@ -1,4 +1,4 @@
-NQueens(4);
+NQueens(14);
 // console.log()
 
 function NQueens(n) {
@@ -66,20 +66,20 @@ function NQueens(n) {
       k++;
     }
 
-    console.log(i + " " + j + ":");
+    // console.log(i + " " + j + ":");
     if (violation) {
       table[i][j] = null;
-      console.log("Violation occurred.");
+      // console.log("Violation occurred.");
       i++;
     } else {
-      console.log("It's OK to put here.");
-      console.log(table);
+      // console.log("It's OK to put here.");
+      // console.log(table);
       if (j === n - 1) {
         perfection++;
-        console.log("There's a perfection meet.");
+        // console.log("There's a perfection meet.");
         table[i][j] = null;
         i++;
-        j = 0;
+        // j = 0;
       } else {
         j++;
         i = 0;
@@ -91,6 +91,7 @@ function NQueens(n) {
       if (j < 0) {
         searching = false;
         console.log("The number of perfections is " + perfection);
+        break;
       }
     }
 
@@ -100,7 +101,7 @@ function NQueens(n) {
         if (table[b][j] === "Q") {
           table[b][j] = null;
           i = b + 1;
-          console.log("back track to " + b + " " + j);
+          // console.log("back track to " + b + " " + j);
         }
       }
     }
