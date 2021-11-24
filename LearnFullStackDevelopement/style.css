@@ -1,0 +1,21 @@
+h1.header1 {
+  color: rgba(247, 244, 242, 0.2);
+  background-color: black;
+  width: 60vw;
+  height: 0%;
+}
+
+h1 {
+  color: darkolivegreen;
+}
+
+p {
+  color: black;
+  font-size: 1rem;
+  text-indent: 2rem;
+}
+
+a.GreenText {
+  background-color: rgb(245, 235, 221);
+  width: 20vw;
+}
