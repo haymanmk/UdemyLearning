@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+// header {
+//   nav {
+//     display: flex;
+//     justify-content: space-between;
+//     ul {
+//       display: flex;
+//       justify-content: space-evenly;
+//       list-style: none;
+//       li {
+//         a {
+//           color: #161008;
+//           text-decoration: none;
+//         }
+//       }
+//     }
+// }
+.container {
+  display: flex;
+  width: 100vw;
+  background-color: cornflowerblue;
+}
+
+.navBarList {
+  display: flex;
+}
+
+.logo {
+  color: #161008;
+  font-family: "Pacifico", cursive;
+  text-decoration: none;
+}

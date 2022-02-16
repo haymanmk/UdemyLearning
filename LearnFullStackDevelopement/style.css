@@ -1,8 +1,8 @@
 h1.header1 {
   color: rgba(247, 244, 242, 0.2);
   background-color: black;
-  width: 60vw;
-  height: 0%;
+  width: 50vw;
+  height: 10vw;
 }
 
 h1 {
@@ -17,5 +17,6 @@ p {
 
 a.GreenText {
   background-color: rgb(245, 235, 221);
-  width: 20vw;
+  display: block;
+  width: 50vw;
 }
